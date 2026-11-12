@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="mn" data-bs-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 8 | Bootstrap Gallery</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg border-bottom border-secondary sticky-top bg-body">
+ <div class="container"><a class="navbar-brand fw-bold" href="#">MOTION<span class="text-brand">.</span></a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Цэс"><span class="navbar-toggler-icon"></span></button>
+ <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3"><li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li><li class="nav-item"><a class="nav-link" href="#contact">Холбоо барих</a></li><li class="nav-item"><button class="btn btn-outline-secondary btn-sm" id="themeBtn" type="button">☼ Dark / Light</button></li></ul></div>
+ </div>
+</nav>
+<header class="container py-5 py-lg-6">
+ <div class="row align-items-center g-4"><div class="col-lg-7"><p class="small text-brand fw-bold letter-space">LAB 08 · BOOTSTRAP 5</p><h1 class="display-3 fw-bold">Дурсамж бүр<br><span class="text-brand">өөрийн өнгөтэй.</span></h1><p class="lead text-secondary">Bootstrap ашиглан бүтээсэн responsive фото цомог. Grid, component болон form validation.</p><a href="#gallery" class="btn btn-brand mt-2">Цомог үзэх ↘</a></div><div class="col-lg-5"><div class="hero-panel rounded-4 p-5 text-center"><div class="display-1">✦</div><h2 class="h4 fw-bold">FRAME YOUR WORLD</h2><p class="text-secondary mb-0">01 — 06 / COLLECTION</p></div></div></div>
+</header>
+<main>
+<section id="gallery" class="container py-5 border-top border-secondary-subtle">
+ <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4"><div><p class="small text-brand fw-bold mb-2">01 / THE COLLECTION</p><h2 class="display-6 fw-bold mb-0">Зургийн цомог</h2></div><p class="text-secondary mb-0">Bootstrap row, col болон card компонент.</p></div>
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+ <div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo1.svg" class="card-img-top" alt="Өглөөний туяа"><div class="card-body"><span class="badge text-bg-secondary mb-2">01 / COLLECTION</span><h3 class="card-title h5">Өглөөний туяа</h3><p class="card-text text-secondary">Шинэ эхлэл, намуухан өглөө, байгалийн өнгө.</p></div></article></div><div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo2.svg" class="card-img-top" alt="Шөнийн хот"><div class="card-body"><span class="badge text-bg-secondary mb-2">02 / COLLECTION</span><h3 class="card-title h5">Шөнийн хот</h3><p class="card-text text-secondary">Гэрэл бүр өөрийн гэсэн түүхийг өгүүлнэ.</p></div></article></div><div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo3.svg" class="card-img-top" alt="Цэнхэр хязгаар"><div class="card-body"><span class="badge text-bg-secondary mb-2">03 / COLLECTION</span><h3 class="card-title h5">Цэнхэр хязгаар</h3><p class="card-text text-secondary">Далайн давалгаа шиг эрх чөлөөтэй бай.</p></div></article></div><div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo4.svg" class="card-img-top" alt="Ногоон ертөнц"><div class="card-body"><span class="badge text-bg-secondary mb-2">04 / COLLECTION</span><h3 class="card-title h5">Ногоон ертөнц</h3><p class="card-text text-secondary">Байгальтай ойр байх жижигхэн мөч.</p></div></article></div><div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo5.svg" class="card-img-top" alt="Өндөр оргил"><div class="card-body"><span class="badge text-bg-secondary mb-2">05 / COLLECTION</span><h3 class="card-title h5">Өндөр оргил</h3><p class="card-text text-secondary">Алхам бүр зорилгод ойртуулна.</p></div></article></div><div class="col"><article class="card gallery-card h-100"><img src="../lab6/img/photo6.svg" class="card-img-top" alt="Оддын аялал"><div class="card-body"><span class="badge text-bg-secondary mb-2">06 / COLLECTION</span><h3 class="card-title h5">Оддын аялал</h3><p class="card-text text-secondary">Хязгааргүй орон зай, хязгааргүй санаа.</p></div></article></div>
+ </div>
+</section>
+<section id="contact" class="container py-5 border-top border-secondary-subtle">
+ <div class="row g-4"><div class="col-lg-5"><p class="small text-brand fw-bold">02 / GET IN TOUCH</p><h2 class="display-6 fw-bold">Холбоо барих</h2><p class="text-secondary">Bootstrap form validation жишээ. Талбаруудыг бөглөж шалгана уу.</p></div><div class="col-lg-7"><form class="needs-validation panel p-4 rounded-4" novalidate>
+ <div class="mb-3"><label for="name" class="form-label">Нэр</label><input id="name" class="form-control" type="text" required minlength="2" placeholder="Таны нэр"><div class="invalid-feedback">Нэрээ дор хаяж 2 тэмдэгтээр оруулна уу.</div></div>
+ <div class="mb-3"><label for="email" class="form-label">Имэйл</label><input id="email" class="form-control" type="email" required placeholder="name@example.com"><div class="invalid-feedback">Зөв имэйл хаяг оруулна уу.</div></div>
+ <div class="mb-3"><label for="message" class="form-label">Зурвас</label><textarea id="message" class="form-control" rows="3" required minlength="10" placeholder="Зурвасаа бичнэ үү"></textarea><div class="invalid-feedback">Зурвас 10-аас дээш тэмдэгттэй байна.</div></div>
+ <button class="btn btn-brand" type="submit">Илгээх</button><p class="small text-secondary mt-3 mb-0">Энэ demo form нь сервер рүү мэдээлэл илгээхгүй.</p>
+ </form></div></div>
+</section>
+</main>
+<footer class="container py-4 border-top border-secondary-subtle d-flex justify-content-between flex-wrap gap-2 text-secondary small"><span>MOTION. · © 2026 Шинэбаяр</span><a href="../index.html">Lab 6 Gallery ↗</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelector("#themeBtn").addEventListener("click",()=>{const el=document.documentElement;el.setAttribute("data-bs-theme",el.getAttribute("data-bs-theme")==="dark"?"light":"dark");});
+(()=>{"use strict";document.querySelectorAll(".needs-validation").forEach(form=>form.addEventListener("submit",event=>{if(!form.checkValidity()){event.preventDefault();event.stopPropagation();}else{event.preventDefault();}form.classList.add("was-validated");}));})();
+</script>
+</body></html>
