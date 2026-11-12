@@ -1,0 +1,34 @@
+$colors: (
+  "bg": #0b0e14,
+  "surface": #151b25,
+  "surface-2": #1c2531,
+  "text": #f4f6fb,
+  "muted": #a5afbd,
+  "accent": #9af06b,
+  "line": #2b3543
+);
+$radii: ("card": 18px, "button": 9px, "pill": 30px);
+$breakpoints: ("phone": 560px, "tablet": 800px, "small": 360px);
+$shadows: ("card": 0 18px 55px #0005);
+$ease: cubic-bezier(.2,.75,.25,1);
+
+:root {
+  color-scheme: dark;
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+  --radius: #{map-get($radii, "card")};
+  --shadow: #{map-get($shadows, "card")};
+  --ease: #{$ease};
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f5f2;
+  --surface: #fff;
+  --surface-2: #e8eee8;
+  --text: #18211c;
+  --muted: #5e6a62;
+  --accent: #347d42;
+  --line: #d5ded6;
+  --shadow: 0 18px 55px #243b241a;
+}
