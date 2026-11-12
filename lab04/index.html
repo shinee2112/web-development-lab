@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Шинэбаярын CSS Flexbox болон Grid лабораторийн ажил">
+  <title>Лаборатори 04 | Flexbox &amp; CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home">SHINEBAYAR<span>.</span></a>
+      <nav class="main-nav" aria-label="Үндсэн цэс">
+        <a href="#home">Нүүр</a>
+        <a href="#courses">Хичээлүүд</a>
+        <a href="#projects">Төслүүд</a>
+        <a href="#about">Миний тухай</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="page-layout">
+    <section class="main-content" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow">WEB DEVELOPMENT • LAB 04</p>
+        <h1 id="page-title">Flexbox &amp; CSS Grid Layout</h1>
+        <p>CSS Flexbox болон Grid ашиглан зохион байгуулсан responsive вэб хуудасны жишээ.</p>
+      </div>
+
+      <section id="courses" aria-labelledby="courses-title">
+        <div class="section-heading">
+          <h2 id="courses-title">Суралцаж буй чиглэлүүд</h2>
+          <span class="section-note">Үндсэн агуулга · CSS Grid</span>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <div class="card-icon">⌨</div>
+            <h3>Python</h3>
+            <p>Python хэлээр программчлалын үндэс болон асуудал шийдвэрлэх арга барил судлах.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">⚙</div>
+            <h3>C++</h3>
+            <p>Алгоритм, өгөгдлийн бүтэц болон C++ хэлний үндсэн ойлголтууд.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">⌘</div>
+            <h3>Сүлжээ</h3>
+            <p>Компьютерийн сүлжээ, холболт болон сүлжээний программчлалын суурь.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">▣</div>
+            <h3>HTML &amp; CSS</h3>
+            <p>Semantic HTML, CSS загварчлал, Flexbox болон Grid ашиглан веб бүтээх.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">◈</div>
+            <h3>IoT</h3>
+            <p>Мэдрэгч, микроконтроллер болон төхөөрөмжүүдийн харилцаа холбоо.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">✦</div>
+            <h3>Технологи</h3>
+            <p>Шинэ технологи судалж, практик төсөл дээр туршиж суралцах.</p>
+            <a href="#about">Дэлгэрэнгүй →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="project-panel">
+        <h2>Лабораторийн зорилго</h2>
+        <p>Navigation хэсгийг Flexbox-оор, үндсэн картан агуулгыг CSS Grid-ээр зохион байгуулсан. Дэлгэцийн хэмжээнээс хамааран баганын тоо автоматаар өөрчлөгдөнө.</p>
+      </section>
+    </section>
+
+    <aside id="about" class="sidebar">
+      <section class="sidebar-card">
+        <p class="eyebrow">ОЮУТНЫ МЭДЭЭЛЭЛ</p>
+        <h2>Шинэбаяр</h2>
+        <p>Мэдээллийн технологийн чиглэлээр суралцагч.</p>
+        <ul class="profile-list">
+          <li><span>Мэргэжил</span><strong>IoT</strong></li>
+          <li><span>Сонирхол</span><strong>Программчлал</strong></li>
+          <li><span>GitHub</span><strong><a href="https://github.com/shinee2112">shinee2112</a></strong></li>
+        </ul>
+      </section>
+      <section class="sidebar-card">
+        <h2>Ашигласан технологи</h2>
+        <div class="tag-list">
+          <span>HTML5</span><span>CSS3</span><span>Flexbox</span><span>Grid</span><span>Responsive</span>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Шинэбаяр · Лаборатори 04</p>
+    <a href="https://github.com/shinee2112">GitHub профайл</a>
+  </footer>
+</body>
+</html>
