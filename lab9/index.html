@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="JavaScript validation болон алгоритмын дасгалтай зургийн цомог">
+<title>Lab 9 | JavaScript Validation</title>
+<link rel="stylesheet" href="style.css">
+<script src="js/algorithms.js" defer></script>
+<script src="js/validators.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="#top">MOTION<span>.</span></a><nav aria-label="Үндсэн цэс"><a href="#gallery">Gallery</a><a href="#feedback">Санал хүсэлт</a><a href="#experiments">JS туршилт</a></nav></header>
+<main id="top">
+<section class="hero"><div><p class="eyebrow">LAB 09 · JAVASCRIPT VALIDATION</p><h1>Таны санал<br><span>бидэнд чухал.</span></h1><p>JavaScript validation болон алгоритмын дасгал бүхий зургийн цомгийн портал.</p><a class="primary-link" href="#feedback">Санал хүсэлт илгээх ↘</a></div><div class="hero-art" aria-hidden="true"><span>✦</span><b>YOUR<br>VOICE<br>MATTERS</b><small>JS / 09</small></div></section>
+<section id="gallery" class="section"><div class="section-title"><p class="eyebrow">01 / COLLECTION</p><h2>Зургийн цомог</h2></div><div class="gallery-grid">
+<article class="gallery-card"><img src="../lab6/img/photo1.svg" alt="Өглөөний туяа"><div><span>01 / COLLECTION</span><h3>Өглөөний туяа</h3></div></article><article class="gallery-card"><img src="../lab6/img/photo2.svg" alt="Шөнийн хот"><div><span>02 / COLLECTION</span><h3>Шөнийн хот</h3></div></article><article class="gallery-card"><img src="../lab6/img/photo3.svg" alt="Цэнхэр хязгаар"><div><span>03 / COLLECTION</span><h3>Цэнхэр хязгаар</h3></div></article><article class="gallery-card"><img src="../lab6/img/photo4.svg" alt="Ногоон ертөнц"><div><span>04 / COLLECTION</span><h3>Ногоон ертөнц</h3></div></article><article class="gallery-card"><img src="../lab6/img/photo5.svg" alt="Өндөр оргил"><div><span>05 / COLLECTION</span><h3>Өндөр оргил</h3></div></article><article class="gallery-card"><img src="../lab6/img/photo6.svg" alt="Оддын аялал"><div><span>06 / COLLECTION</span><h3>Оддын аялал</h3></div></article>
+</div></section>
+<section id="feedback" class="section feedback-section"><div class="section-title"><p class="eyebrow">02 / FEEDBACK FORM</p><h2>Санал хүсэлт</h2><p>Бүх талбарыг зааврын дагуу бөглөнө үү. Алдааг талбар бүр дээр харуулна.</p></div>
+<form id="feedbackForm" novalidate>
+<div class="form-grid">
+<div class="form-field"><label for="name">Нэр</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Жишээ: Шинэбаяр" required aria-describedby="nameFeedback"><small id="nameFeedback" class="field-feedback">2–50 тэмдэгт, тоо агуулахгүй.</small></div>
+<div class="form-field"><label for="email">Имэйл</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required aria-describedby="emailFeedback"><small id="emailFeedback" class="field-feedback">нэр@домэйн.өргөтгөл хэлбэртэй.</small></div>
+<div class="form-field"><label for="password">Нууц үг</label><input id="password" name="password" type="password" autocomplete="new-password" placeholder="Үсэг + тоо, 8-аас дээш" required aria-describedby="passwordFeedback"><small id="passwordFeedback" class="field-feedback">8-аас дээш тэмдэгт, үсэг болон тоо агуулна.</small></div>
+<div class="form-field"><label for="message">Санал хүсэлт</label><textarea id="message" name="message" rows="5" placeholder="Санал хүсэлтээ бичнэ үү..." required aria-describedby="messageFeedback"></textarea><small id="messageFeedback" class="field-feedback">10–500 тэмдэгт байна.</small></div>
+</div>
+<button class="primary-link submit-button" type="submit">Илгээх ↗</button><p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section id="experiments" class="section experiments"><div class="section-title"><p class="eyebrow">03 / JAVASCRIPT PRACTICE</p><h2>Console туршилтууд</h2><p>Хувьсагчийн төрөл, хөрвүүлэлт, 0.1 + 0.2 болон алгоритмын 8 функцийн жишээг browser console дээр хэвлэнэ.</p></div><div class="experiment-list"><span>typeof</span><span>console.table()</span><span>0.1 + 0.2</span><span>8 Algorithms</span></div><p class="console-hint">Browser дээр F12 → Console нээгээд үр дүнг харна уу.</p></section>
+</main>
+<footer><a class="brand" href="#top">MOTION<span>.</span></a><p>© 2026 Шинэбаяр · Lab 9 JavaScript</p><a href="../index.html">CV / Home ↗</a></footer>
+</body></html>
