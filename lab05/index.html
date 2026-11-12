@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mobile-first responsive танилцуулга вэб хуудас">
+  <title>Lab 5 | Responsive Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Нүүр хуудас">SH<span>.</span></a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Цэс нээх">
+    <label class="menu-button" for="nav-toggle"><span></span><span></span><span></span></label>
+    <nav class="navigation" aria-label="Үндсэн навигаци">
+      <a href="#home">Нүүр</a>
+      <a href="#about">Миний тухай</a>
+      <a href="#skills">Ур чадвар</a>
+      <a href="#contact">Холбоо барих</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">RESPONSIVE WEB DESIGN · LAB 05</p>
+        <h1>Сайн байна уу,<br><span>Шинэбаяр</span> байна.</h1>
+        <p class="intro">Би IoT чиглэлээр суралцдаг. Технологи, программчлал болон шинэ зүйл бүтээх сонирхолтой.</p>
+        <a class="primary-button" href="#about">Дэлгэрэнгүй үзэх <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-label="Технологийн дүрслэл">
+        <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+        <div class="art-card"><span class="art-symbol">&lt;/&gt;</span><p>BUILD · LEARN · CREATE</p></div>
+        <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading"><p class="eyebrow">01 / ABOUT</p><h2>Миний тухай</h2></div>
+      <div class="about-content"><p>Намайг Шинэбаяр гэдэг. Би IoT буюу юмсын интернэтийн чиглэлээр суралцдаг оюутан. Вэб хөгжүүлэлт, компьютерийн сүлжээ болон программчлалын мэдлэгээ тасралтгүй хөгжүүлэхийг зорьдог.</p><div class="info-chip">📍 Монгол Улс</div><div class="info-chip">🎓 IoT оюутан</div></div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-heading"><p class="eyebrow">02 / WHAT I DO</p><h2>Миний ур чадвар</h2></div>
+      <div class="skill-grid">
+        <article class="skill-card"><span class="card-number">01</span><div class="skill-icon">Py</div><h3>Python</h3><p>Программчлалын үндсэн ойлголт, алгоритм.</p></article>
+        <article class="skill-card"><span class="card-number">02</span><div class="skill-icon">C++</div><h3>C++</h3><p>Объект хандалтат программчлалын суурь.</p></article>
+        <article class="skill-card"><span class="card-number">03</span><div class="skill-icon">⌘</div><h3>Network</h3><p>Компьютерийн сүлжээний үндсэн ойлголт.</p></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact"><div><p class="eyebrow">03 / GET IN TOUCH</p><h2>Холбоотой байцгаая.</h2><p>Миний ажлууд болон кодыг GitHub дээрээс үзээрэй.</p></div><a class="primary-button" href="https://github.com/shinee2112" target="_blank" rel="noopener">GitHub профайл ↗</a></section>
+  </main>
+  <footer><a class="brand" href="#home">SH<span>.</span></a><p>© 2026 Шинэбаяр · Responsive Web Design</p><a href="#home">Дээшээ ↑</a></footer>
+</body>
+</html>
