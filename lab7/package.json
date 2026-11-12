@@ -1,0 +1,13 @@
+{
+  "name": "lab7-scss-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lab 7 - SCSS refactor of the Lab 6 Motion Gallery",
+  "scripts": {
+    "build": "sass scss/main.scss style.css --style=compressed",
+    "watch": "sass --watch scss/main.scss:style.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
