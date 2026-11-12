@@ -18,9 +18,9 @@ npm run watch:tailwind
 
 | Үзүүлэлт | Bootstrap | Tailwind |
 |---|---:|---:|
-| Framework CSS | Bootstrap 5.3 CDN (хуудаснаас гадуур) | `tailwind.css` (локал build) |
+| CSS файлын эх кодын хэмжээ (тэмдэгтийн тоо) | `bootstrap.css`: 877; Bootstrap CDN тусдаа татагдана | `tailwind.css`: 4629; CLI build output файл |
 | Custom stylesheet | `bootstrap.css` | `tailwind.css` |
-| Card-ын class тоо (нэг card wrapper) | 3 | 13 |
+| Card-ын class тоо (нэг card wrapper) | 3 | 9 |
 | Lighthouse Performance | Бодит audit ажиллуулж бөглөнө | Бодит audit ажиллуулж бөглөнө |
 | Lighthouse Accessibility | Бодит audit ажиллуулж бөглөнө | Бодит audit ажиллуулж бөглөнө |
 
