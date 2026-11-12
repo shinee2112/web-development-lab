@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Шинэбаярын семантик HTML бүртгэлийн анкет">
+  <title>Лаборатори 02 | Оюутны бүртгэлийн портал</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px; min-height: 100vh;
+      background: #050505; color: #f4f4f5;
+      font-family: Arial, sans-serif; line-height: 1.6;
+    }
+    header, main, footer {
+      width: min(100%, 920px); margin: 0 auto;
+    }
+    header, article, main > section, footer {
+      background: #111; border: 1px solid #303030;
+      border-radius: 16px; padding: 24px; margin-bottom: 20px;
+    }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-top: 0; color: #fff; }
+    h2 { color: #7dd3fc; margin-top: 0; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 18px; padding: 0; list-style: none; }
+    a { color: #7dd3fc; }
+    a:hover { color: #fff; }
+    fieldset { border: 1px solid #444; border-radius: 12px; padding: 20px; margin: 18px 0; }
+    legend { color: #7dd3fc; font-weight: bold; padding: 0 8px; }
+    label { display: inline-block; margin: 8px 0 5px; }
+    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+    select, textarea {
+      width: 100%; padding: 11px 12px; border: 1px solid #555;
+      border-radius: 8px; background: #080808; color: #f4f4f5;
+      font: inherit; margin-bottom: 10px;
+    }
+    input[type="radio"], input[type="checkbox"] { accent-color: #38bdf8; margin: 0 6px 0 0; }
+    input[type="file"] { display: block; margin: 8px 0 14px; max-width: 100%; }
+    textarea { resize: vertical; }
+    button {
+      border: 0; border-radius: 8px; padding: 11px 18px;
+      font-weight: bold; cursor: pointer; margin: 8px 8px 0 0;
+    }
+    button[type="submit"] { background: #38bdf8; color: #06121a; }
+    button[type="reset"] { background: #333; color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #444; padding: 11px; text-align: left; }
+    thead { background: #202a32; }
+    tbody tr:nth-child(even) { background: #191919; }
+    footer { text-align: center; color: #aaa; }
+    .hint { color: #aaa; font-size: .92rem; }
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      header, article, main > section, footer { padding: 18px; }
+      nav ul { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Оюутны Бүртгэлийн Портал</h1>
+    <nav aria-label="Үндсэн навигаци">
+      <ul>
+        <li><a href="../index.html">Нүүр</a></li>
+        <li><a href="#anket">Анкет бөглөх</a></li>
+        <li><a href="#help">Тусламж</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="anket">
+      <section>
+        <h2>Хэрэглэгчийн анкет бөглөх</h2>
+        <p>Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв бөглөнө үү.</p>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Хувийн мэдээлэл</legend>
+
+            <label for="fullname">Овог нэр:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Жишээ: Шинэбаяр" required minlength="2">
+
+            <label for="email">Цахим хаяг (Email):</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+            <label for="password">Нууц үг:</label>
+            <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+
+            <label for="phone">Утасны дугаар:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88112233" title="8 оронтой утасны дугаар оруулна уу." required>
+
+            <label for="dob">Төрсөн огноо:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <p><strong>Хүйс:</strong></p>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Эрэгтэй</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Эмэгтэй</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Боловсрол ба сонирхол</legend>
+
+            <label for="degree">Суралцаж буй түвшин:</label>
+            <select id="degree" name="degree" required>
+              <option value="">-- Сонгоно уу --</option>
+              <option value="bachelor">Бакалавр</option>
+              <option value="master">Магистр</option>
+              <option value="doctor">Докторант</option>
+            </select>
+
+            <p><strong>Сонирхож буй технологиуд:</strong></p>
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML5 / CSS3</label><br>
+            <input type="checkbox" id="js" name="skills" value="JavaScript">
+            <label for="js">JavaScript</label><br>
+            <input type="checkbox" id="php" name="skills" value="PHP">
+            <label for="php">PHP &amp; MySQL</label><br><br>
+
+            <label for="avatar">Профайл зураг оруулна уу:</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*">
+
+            <label for="bio">Товч танилцуулга / Өөрийн тухай:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Өөрийн танилцуулгыг энд бичнэ үү..."></textarea>
+          </fieldset>
+
+          <button type="submit">Анкет илгээх</button>
+          <button type="reset">Дахин эхлүүлэх</button>
+          <p class="hint">* Заавал бөглөх талбаруудыг хоосон үлдээж болохгүй. Утасны дугаар 8 оронтой байна.</p>
+        </form>
+      </section>
+    </article>
+
+    <section>
+      <h2>Миний сонирхол</h2>
+      <ul>
+        <li>Веб хөгжүүлэлт</li>
+        <li>Программчлал, шинэ технологи судлах</li>
+        <li>Компьютер тоглоом, кибер спорт</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Миний дүн</h2>
+      <table>
+        <thead>
+          <tr><th scope="col">Хичээл</th><th scope="col">Дүн</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Веб зохиомж</td><td>95</td></tr>
+          <tr><td>Мэдээллийн сан</td><td>88</td></tr>
+          <tr><td>Алгоритм</td><td>92</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">Дүнгийн жишээ мэдээлэл.</p>
+    </section>
+  </main>
+
+  <footer id="help">
+    <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+    <p><a href="https://github.com/shinee2112">GitHub: shinee2112</a></p>
+  </footer>
+</body>
+</html>
