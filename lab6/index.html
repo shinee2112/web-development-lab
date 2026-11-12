@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS3 animation, transform, custom properties болон multimedia бүхий responsive зургийн цомог">
+  <meta name="theme-color" content="#10131b">
+  <title>Lab 6 | Motion Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Motion Gallery нүүр">MOTION<span>.</span></a>
+    <nav aria-label="Үндсэн цэс">
+      <a href="#gallery">Gallery</a><a href="#motion">Motion</a><a href="#media">Multimedia</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Загвар солих" aria-pressed="false">☼ <span>Theme</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">LAB 06 · CSS3 MOTION & MULTIMEDIA</p>
+        <h1>Дурсамж бүр<br><span>өөрийн өнгөтэй.</span></h1>
+        <p>Зураг, хөдөлгөөн, өнгө болон multimedia-г нэг дор цуглуулсан миний responsive зургийн цомог.</p>
+        <a class="button-link" href="#gallery">Цомог үзэх <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-tile"><span>✦</span><b>FRAME<br>YOUR WORLD</b><small>01 — 06</small></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE COLLECTION</p><h2>Зургийн цомог</h2></div><p>Карт дээр hover хийх эсвэл Flip товчийг дарж ар талыг нь хараарай.</p></div>
+      <div class="gallery-grid">
+        <article class="gallery-card" style="--i:0">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo1.svg" alt="Нар мандах үеийн уулсын дүрслэл"><span class="photo-tag">01 / NATURE</span><h3>Өглөөний туяа</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">01</span><h3>Өглөөний туяа</h3><p>Шинэ эхлэл, намуухан өглөө, байгалийн өнгө.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+        <article class="gallery-card" style="--i:1">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo2.svg" alt="Хотын шөнийн гэрлийн дүрслэл"><span class="photo-tag">02 / CITY</span><h3>Шөнийн хот</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">02</span><h3>Шөнийн хот</h3><p>Гэрэл бүр өөрийн гэсэн түүхийг өгүүлнэ.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+        <article class="gallery-card" style="--i:2">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo3.svg" alt="Далай ба давалгааны дүрслэл"><span class="photo-tag">03 / OCEAN</span><h3>Цэнхэр хязгаар</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">03</span><h3>Цэнхэр хязгаар</h3><p>Далайн давалгаа шиг эрх чөлөөтэй бай.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+        <article class="gallery-card" style="--i:3">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo4.svg" alt="Ойн ногоон моддын дүрслэл"><span class="photo-tag">04 / FOREST</span><h3>Ногоон ертөнц</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">04</span><h3>Ногоон ертөнц</h3><p>Байгальтай ойр байх жижигхэн мөч.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+        <article class="gallery-card" style="--i:4">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo5.svg" alt="Цаст уулсын дүрслэл"><span class="photo-tag">05 / MOUNTAIN</span><h3>Өндөр оргил</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">05</span><h3>Өндөр оргил</h3><p>Алхам бүр зорилгод ойртуулна.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+        <article class="gallery-card" style="--i:5">
+          <div class="card-inner">
+            <div class="card-face card-front"><img src="img/photo6.svg" alt="Одод түгсэн сансрын дүрслэл"><span class="photo-tag">06 / SPACE</span><h3>Оддын аялал</h3><button class="flip-button" type="button" aria-pressed="false">Flip ↻</button></div>
+            <div class="card-face card-back"><span class="back-index">06</span><h3>Оддын аялал</h3><p>Хязгааргүй орон зай, хязгааргүй санаа.</p><button class="flip-button" type="button" aria-pressed="true">Буцах ↶</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section motion-section" id="motion">
+      <div class="section-heading"><div><p class="eyebrow">02 / CSS ANIMATION</p><h2>Хөдөлгөөний туршилт</h2></div><p>CSS @keyframes болон custom property ашигласан stagger animation.</p></div>
+      <div class="motion-demo" aria-label="Аажмаар гарч ирэх зургаан хөдөлгөөнт цэг">
+        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span>
+      </div>
+      <p class="motion-note">Хөдөлгөөнд мэдрэмтгий хэрэглэгчдийн тохиргоог <code>prefers-reduced-motion</code> ашиглан хүндэтгэнэ.</p>
+    </section>
+
+    <section class="section media-section" id="media">
+      <div class="section-heading"><div><p class="eyebrow">03 / MULTIMEDIA</p><h2>Видео ба нэмэлт контент</h2></div><p>Video, subtitle track, iframe болон inline SVG жишээ.</p></div>
+      <div class="media-grid">
+        <article class="media-panel">
+          <h3>HTML5 Video</h3>
+          <video controls preload="metadata" poster="img/video-poster.svg">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Таны browser video тоглуулах боломжгүй байна.
+            <track kind="captions" src="video/clip.mn.vtt" srclang="mn" label="Монгол хадмал" default>
+          </video>
+          <p class="media-caption">Жишээ видео · Монгол хадмалтай</p>
+        </article>
+        <article class="media-panel">
+          <h3>Inline SVG</h3>
+          <div class="svg-showcase">
+            <svg viewBox="0 0 320 170" role="img" aria-labelledby="svgTitle svgDesc">
+              <title id="svgTitle">Дижитал ертөнц</title><desc id="svgDesc">Холбогдсон цэгүүдийг дүрсэлсэн SVG зураг.</desc>
+              <path d="M48 90 L160 35 L272 90 L160 145 Z M48 90 L160 145 M160 35 L160 145 M272 90 L160 35" fill="none" stroke="currentColor" stroke-width="2" opacity=".6"/>
+              <circle cx="48" cy="90" r="13" fill="#9af06b"/><circle cx="160" cy="35" r="13" fill="#70c9ff"/><circle cx="272" cy="90" r="13" fill="#ffb86b"/><circle cx="160" cy="145" r="13" fill="#c5a3ff"/>
+            </svg>
+          </div>
+          <p class="media-caption">Inline SVG · title болон description-тэй</p>
+        </article>
+      </div>
+      <article class="media-panel embed-panel">
+        <div><h3>External video embed</h3><p class="media-caption">YouTube privacy-enhanced embed жишээ.</p></div>
+        <div class="embed-wrap"><iframe src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny — видео жишээ" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      </article>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home">MOTION<span>.</span></a><p>© 2026 Шинэбаяр · Lab 6 CSS3 Gallery</p><a href="#home">Дээшээ ↑</a></footer>
+</body>
+</html>
