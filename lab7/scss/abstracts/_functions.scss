@@ -1,0 +1,12 @@
+@function rem($px, $base: 16px) {
+  @return ($px / $base) * 1rem;
+}
+
+@function contrast($color) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  $luminance: (($red * .299) + ($green * .587) + ($blue * .114));
+  @if $luminance > 150 { @return #111; }
+  @return #fff;
+}
