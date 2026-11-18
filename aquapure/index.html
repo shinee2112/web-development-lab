@@ -1,94 +1,13 @@
 <!doctype html>
-<html lang="mn">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f2f9fc">
-  <meta name="description" content="AquaPure — гэр, оффисын ус цэвэршүүлэгчийн сонголт, суурилуулалт болон үйлчилгээний зөвлөгөө.">
-  <title>AquaPure — Цэвэр усны ухаалаг сонголт</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="announcement"><span>Улаанбаатар хотод хүргэлттэй</span><span class="announcement-dot">•</span><a href="#contact">Зөвлөгөө авах: 7700-1234</a></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="AquaPure нүүр хуудас"><span class="brand-mark">a<span>q</span></span><span class="brand-name">AquaPure<small>ЦЭВЭР УСНЫ ШИЙДЭЛ</small></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Цэс нээх" aria-expanded="false">☰</button>
-    <nav id="mainNav" aria-label="Үндсэн цэс"><a href="#products">Бүтээгдэхүүн</a><a href="#services">Үйлчилгээ</a><a href="#about">Бидний тухай</a><a href="#faq">Түгээмэл асуулт</a></nav>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Шөнийн горим асаах" aria-pressed="false"><span id="themeIcon">☾</span><span id="themeLabel">Night</span></button>
-    <button class="cart-trigger" id="cartOpen" aria-label="Сагс нээх"><span class="cart-icon">▢</span> Сагс <b id="count">0</b></button>
-  </header>
-
-  <main id="home">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span> ЦЭВЭР УСНЫ ШИНЭ СТАНДАРТ</div>
-        <h1>Усныхаа чанарт<br><em>итгэлтэй бай.</em></h1>
-        <p class="hero-lead">Гэр бүл, ажлын орчиндоо тохирсон ус цэвэршүүлэх шийдлээ сонго. Бид сонголтоос эхлээд суурилуулалт, арчилгааны зөвлөгөө хүртэл тусална.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#products">Бүтээгдэхүүн үзэх <span>↗</span></a><a class="text-link" href="#contact">Мэргэжилтнээс асуух <span>→</span></a></div>
-        <div class="hero-points"><span>✓ Хэрэгцээнд тохирсон сонголт</span><span>✓ Суурилуулалтын зөвлөгөө</span></div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-        <div class="hero-photo"><img src="https://cuckooamerica.com/cdn/shop/products/ts_11_64bab965-31fa-4559-a0eb-e9cba021f357_1800x1800.jpg?v=1642627786" alt="Орчин үеийн гал тогоонд байрлуулсан цагаан ширээний ус цэвэршүүлэгч" fetchpriority="high"></div>
-        <div class="hero-note"><span class="note-icon">✧</span><span><b>Ухаалаг сонголт</b><small>Таны хэрэглээнд тохируулна</small></span></div>
-        <div class="hero-caption">PURE WATER, BETTER LIVING</div>
-      </div>
-    </section>
-
-    <section class="trust-strip" aria-label="Үйлчилгээний давуу тал">
-      <div><span class="trust-icon">⌂</span><span><b>Гэр & оффис</b><small>Олон төрлийн шийдэл</small></span></div>
-      <div><span class="trust-icon">◈</span><span><b>Шүүлтүүрийн сонголт</b><small>Хэрэгцээнд нийцүүлнэ</small></span></div>
-      <div><span class="trust-icon">⚙</span><span><b>Суурилуулалтын зөвлөгөө</b><small>Ашиглалтын дэмжлэг</small></span></div>
-      <div><span class="trust-icon">♡</span><span><b>Хэрэглэгчийн дэмжлэг</b><small>Асуултад тань тусална</small></span></div>
-    </section>
-
-    <section class="section products-section" id="products">
-      <div class="section-heading"><div><span class="eyebrow">БҮТЭЭГДЭХҮҮНИЙ КАТАЛОГ</span><h2>Танд тохирох <em>шийдлээ сонго.</em></h2></div><p>Хэрэглээний орчин, багтаамж болон төсөвтөө тохируулан сонголтоо хийгээрэй.</p></div>
-      <div class="catalog-toolbar"><div class="filters" role="group" aria-label="Бүтээгдэхүүн шүүх"><button class="filter active" data-filter="all">Бүгд <span>03</span></button><button class="filter" data-filter="home">Гэр ахуй</button><button class="filter" data-filter="office">Оффис</button><button class="filter" data-filter="compact">Компакт</button></div><span class="catalog-count">3 бүтээгдэхүүн</span></div>
-      <div class="products">
-        <article class="product-card" data-category="home">
-          <div class="product-image product-image-ro"><span class="product-tag">ГЭР АХУЙН СОНГОЛТ</span><img src="https://image.made-in-china.com/2f0j00QyDimPUoZjzb/Undersink-RO-Water-Purification-System-with-Faucet-and-Tank.webp" alt="AquaPure RO-5 төрлийн олон шатлалт ус цэвэршүүлэгч" loading="lazy"></div>
-          <div class="product-info"><div class="product-type">REVERSE OSMOSIS · RO</div><h3>AquaPure RO-5</h3><p>Гал тогооны доор байрлуулах 5 шатлалт урвуу осмос систем.</p><div class="product-bottom"><div><small>Төслийн үнэ</small><strong>₮ 890,000</strong></div><button class="add-button" data-id="ro5" aria-label="AquaPure RO-5 сагсанд нэмэх">＋</button></div></div>
-        </article>
-        <article class="product-card" data-category="office">
-          <div class="product-image product-image-office"><span class="product-tag">ОФФИСТ</span><img src="https://www.hydroflux.com.sg/cdn/shop/products/HydrofluxH2200StandingWaterPurifier_1024x.png?v=1637422736" alt="AquaPure Office төрлийн босоо ус цэвэршүүлэгч" loading="lazy"></div>
-          <div class="product-info"><div class="product-type">HOT & COLD · OFFICE</div><h3>AquaPure Office</h3><p>Ажлын орчинд зориулсан халуун, хүйтэн ус түгээгч.</p><div class="product-bottom"><div><small>Төслийн үнэ</small><strong>₮ 1,250,000</strong></div><button class="add-button" data-id="office" aria-label="AquaPure Office сагсанд нэмэх">＋</button></div></div>
-        </article>
-        <article class="product-card" data-category="compact">
-          <div class="product-image product-image-mini"><span class="product-tag">КОМПАКТ</span><img src="https://m.media-amazon.com/images/I/61i%2BIh8LKbL._AC_SL1000_.jpg" alt="AquaPure Mini компакт ус цэвэршүүлэгч" loading="lazy"></div>
-          <div class="product-info"><div class="product-type">COMPACT · SPACE SAVING</div><h3>AquaPure Mini</h3><p>Зай бага эзлэх, жижиг орчинд тохиромжтой загвар.</p><div class="product-bottom"><div><small>Төслийн үнэ</small><strong>₮ 390,000</strong></div><button class="add-button" data-id="mini" aria-label="AquaPure Mini сагсанд нэмэх">＋</button></div></div>
-        </article>
-      </div>
-      <p class="price-note">* Бүтээгдэхүүний нэршил, үнэ болон зураг нь одоогийн танилцуулгын демо мэдээлэл болно.</p>
-    </section>
-
-    <section class="service-band" id="services"><div class="service-intro"><span class="eyebrow light">БИДНИЙ ҮЙЛЧИЛГЭЭ</span><h2>Зөвхөн төхөөрөмж биш,<br><em>зөв шийдэл.</em></h2><p>Таны усны хэрэглээ, суурилуулах орчинд тохирсон сонголт хийхэд тусална.</p><a class="button button-light" href="#contact">Зөвлөгөө авах <span>↗</span></a></div><div class="service-list"><div class="service-item"><span>01</span><div><b>Хэрэгцээ тодорхойлох</b><p>Гэр бүл, оффисын хэрэглээ болон орчныг харгалзана.</p></div><i>↗</i></div><div class="service-item"><span>02</span><div><b>Төхөөрөмж сонгох</b><p>Тохирох шүүлтүүр, хүчин чадал, загварыг санал болгоно.</p></div><i>↗</i></div><div class="service-item"><span>03</span><div><b>Суурилуулалт, арчилгаа</b><p>Суурилуулалт болон шүүлтүүр солих талаар зөвлөнө.</p></div><i>↗</i></div></div></section>
-
-    <section class="about-section" id="about"><div class="about-visual"><div class="water-mark">H₂O</div><div class="about-stat"><b>PURE</b><span>Усны зөв сонголт</span></div></div><div class="about-copy"><span class="eyebrow">AQUAPURE-ИЙН ТУХАЙ</span><h2>Цэвэр усны сонголтыг<br><em>илүү хялбар болгоё.</em></h2><p>AquaPure нь ус цэвэршүүлэгчийн төрлүүдийг нэг дороос харьцуулж, өөрийн хэрэглээнд тохирсон шийдлээ сонгоход чиглэсэн танилцуулгын сайт юм.</p><p>Бидний зорилго бол мэдээллийг ойлгомжтой хүргэж, бүтээгдэхүүн сонголт болон үйлчилгээний талаар зөвлөгөө авах боломж бүрдүүлэх.</p><a class="text-link" href="#contact">Бидэнтэй холбогдох <span>→</span></a></div></section>
-
-    <section class="faq-section" id="faq"><div class="section-heading"><div><span class="eyebrow">ТУСЛАМЖ</span><h2>Түгээмэл <em>асуултууд.</em></h2></div><p>Ус цэвэршүүлэгч сонгохын өмнө мэдэхэд хэрэгтэй зүйлс.</p></div><div class="faq-list">
-      <details><summary>Ямар төрлийн ус цэвэршүүлэгч сонгох вэ?<span>＋</span></summary><p>Сонголт нь усны эх үүсвэр, хэрэглэгчийн тоо, суурилуулах зай болон төсвөөс хамаарна. Эргэлзэж байвал зөвлөгөө авах хүсэлт илгээгээрэй.</p></details>
-      <details><summary>Шүүлтүүрийг хэр ойрхон солих шаардлагатай вэ?<span>＋</span></summary><p>Солих хугацаа нь төхөөрөмжийн загвар, шүүлтүүрийн төрөл болон усны чанараас шалтгаална. Үйлдвэрлэгчийн зааврыг дагах нь зөв.</p></details>
-      <details><summary>Суурилуулалтын талаар зөвлөгөө авч болох уу?<span>＋</span></summary><p>Болно. Холбоо барих хэсэгт нэр, утас болон сонирхож буй бүтээгдэхүүнээ үлдээгээрэй.</p></details>
-    </div></section>
-
-    <section class="contact-section" id="contact"><div class="contact-copy"><span class="eyebrow light">ХОЛБОО БАРИХ</span><h2>Танд тохирох<br><em>шийдлийг олъё.</em></h2><p>Бүтээгдэхүүн, үнэ болон суурилуулалтын талаар асуух зүйл байвал бидэнд хүсэлт үлдээгээрэй.</p><div class="contact-detail"><span>☎</span><div><small>УТАС</small><b>7700-1234</b></div></div><div class="contact-detail"><span>◷</span><div><small>ЦАГИЙН ХУВААРЬ</small><b>Даваа – Бямба · 09:00–18:00</b></div></div></div>
-      <div class="chat-invite"><span class="chat-invite-icon">✦</span><h3>Онлайн туслахтай чатлах</h3><p>Бүтээгдэхүүн, үнэ, шүүлтүүр болон суурилуулалтын талаар түгээмэл асуултын хариултыг шууд аваарай.</p><button class="button button-primary" type="button" data-open-chat>Чат эхлүүлэх <span>→</span></button><small>Урьдчилан бэлтгэсэн асуулт-хариултын бот</small></div>
-    </section>
-  </main>
-  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">a<span>q</span></span><span class="brand-name">AquaPure<small>ЦЭВЭР УСНЫ ШИЙДЭЛ</small></span></a><span>© 2026 AquaPure. Танилцуулгын демо сайт.</span><a href="#home">Дээш буцах ↑</a></footer>
-
-  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="AquaPure туслахтай чатлах"><span class="chat-launcher-icon">✦</span><span>Чатлах</span><i></i></button>
-  <section class="chat-panel" id="chatPanel" aria-label="AquaPure чат туслах" aria-hidden="true">
-    <header class="chat-header"><div class="chat-avatar">a<span>q</span></div><div><b>AquaPure туслах</b><small><i></i> Онлайн · Автомат хариулт</small></div><button id="chatClose" type="button" aria-label="Чат хаах">×</button></header>
-    <div class="chat-messages" id="chatMessages" aria-live="polite"><div class="chat-date">ӨНӨӨДӨР</div><div class="chat-bubble bot-bubble">Сайн байна уу! 👋 Би AquaPure-ийн виртуал туслах байна. Доорх сэдвүүдээс сонгоод бүтээгдэхүүн, үнэ болон үйлчилгээний талаар мэдээлэл аваарай.</div><div class="quick-replies"><button type="button" data-question="Бүтээгдэхүүний үнэ хэд вэ?">💧 Үнэ харах</button><button type="button" data-question="Ямар бүтээгдэхүүн сонгох вэ?">🏠 Бүтээгдэхүүн сонгох</button><button type="button" data-question="Шүүлтүүрээ хэзээ солих вэ?">⚙️ Шүүлтүүр</button><button type="button" data-question="Хүргэлт, суурилуулалтын талаар">🚚 Хүргэлт, суурилуулалт</button></div></div>
-    <form class="chat-compose" id="chatForm"><input id="chatInput" type="text" maxlength="300" placeholder="Асуултаа бичнэ үү..." autocomplete="off" aria-label="Асуулт бичих"><button type="submit" aria-label="Илгээх">➤</button></form>
-    <div class="chat-disclaimer">Урьдчилан бэлтгэсэн автомат хариулт · Демо</div>
-  </section>
-  <div id="overlay" aria-hidden="true"></div><aside id="cart" aria-label="Сагс" aria-hidden="true"><div class="cart-head"><div><small>ТАНЫ СОНГОЛТ</small><h2>Сагс</h2></div><button id="close" aria-label="Сагс хаах">×</button></div><div id="items" class="cart-items">Таны сагс хоосон байна.</div><div class="cart-footer"><div class="cart-total"><span>Нийт дүн</span><strong id="total">₮ 0</strong></div><button class="button button-primary" id="checkout">Хүсэлт бөглөх <span>→</span></button><small>Захиалгыг баталгаажуулахын тулд холбоо барих мэдээллээ үлдээнэ үү.</small></div></aside>
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="mn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AquaPure | Цэвэр ус, цэвэр амьдрал</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><div class="top">Улаанбаатар хотод хүргэлттэй · Утас: 7700-1234</div>
+<header><a class="logo" href="#">💧 Aqua<span>Pure</span><small>ЦЭВЭР УСНЫ ШИЙДЭЛ</small></a><nav><a href="#products">Бүтээгдэхүүн</a><a href="#about">Бидний тухай</a><a href="#contact">Холбоо барих</a></nav><button id="cartOpen">Сагс <b id="count">0</b></button></header>
+<main><section class="hero"><div><label>ТАНЫ ГЭР БҮЛИЙН ЭРҮҮЛ МЭНДЭД</label><h1>Цэвэр ус.<br><em>Цэвэр амьдрал.</em></h1><p>Өдөр бүр уух усандаа итгэлтэй бай. Таны гэр, оффисын хэрэгцээнд тохирсон ус цэвэршүүлэгчийг бид санал болгож байна.</p><a class="primary" href="#products">Бүтээгдэхүүн үзэх →</a><p class="proof">✓ Чанартай бүтээгдэхүүн　 ✓ Суурилуулалтын зөвлөгөө</p></div><div class="visual"><div class="glow"></div><div class="machine"><div class="screen">PURE<br><small>WATER</small></div><div class="tap"></div></div><div class="float">✦ 5 шатлалт шүүлтүүр</div></div></section>
+<section class="benefits"><div>◈ <b>Олон шатлалт шүүлтүүр</b><small>Усны чанарыг сайжруулна</small></div><div>⌂ <b>Гэр, оффист</b><small>Хэрэгцээнд тохирсон шийдэл</small></div><div>♧ <b>Засвар үйлчилгээ</b><small>Суурилуулалт, зөвлөгөө</small></div><div>✓ <b>Баталгаат бүтээгдэхүүн</b><small>Найдвартай сонголт</small></div></section>
+<section class="section" id="products"><div class="heading"><div><label>МАНАЙ СОНГОЛТ</label><h2>Танд тохирох <em>цэвэр усны шийдэл</em></h2></div><p>Чанартай ус цэвэршүүлэгчийн сонголт</p></div><div class="filters"><button class="active" data-filter="all">Бүгд</button><button data-filter="home">Гэр ахуй</button><button data-filter="office">Оффис</button><button data-filter="compact">Овор багатай</button></div><div class="products">
+<article data-category="home"><div class="product-art art1"><span>RO</span></div><label>ГЭР АХУЙ · RO SYSTEM</label><h3>AquaPure RO-5</h3><p>5 шатлалт урвуу осмос систем</p><strong>₮ 890,000</strong><button class="add" data-id="ro5">Сагсанд нэмэх +</button></article>
+<article data-category="office"><div class="product-art art2"><span>OFFICE</span></div><label>ОФФИС · HOT & COLD</label><h3>AquaPure Office</h3><p>Халуун, хүйтэн ус түгээгч</p><strong>₮ 1,250,000</strong><button class="add" data-id="office">Сагсанд нэмэх +</button></article>
+<article data-category="compact"><div class="product-art art3"><span>MINI</span></div><label>АЯЛАЛ · COMPACT</label><h3>AquaPure Mini</h3><p>Жижиг оврын ус шүүгч</p><strong>₮ 390,000</strong><button class="add" data-id="mini">Сагсанд нэмэх +</button></article></div></section>
+<section class="banner" id="about"><div><label>ЗӨВ СОНГОЛТОО ХИЙЦГЭЭЕ</label><h2>Танд аль ус цэвэршүүлэгч тохирохыг мэдэхгүй байна уу?</h2><p>Манай зөвлөх таны хэрэглээ, төсөвт тохирсон бүтээгдэхүүн сонгоход тусална.</p><a class="white" href="#contact">Зөвлөгөө авах →</a></div><span class="h2o">H₂O</span></section>
+<section class="section contact" id="contact"><div><label>БИДЭНТЭЙ ХОЛБОГДООРОЙ</label><h2>Танд туслахад<br><em>бид бэлэн.</em></h2><p>Бүтээгдэхүүний үнэ, суурилуулалт болон үйлчилгээний талаар асуугаарай.</p><b>Утас: 7700-1234</b><p>Даваа – Бямба · 09:00–18:00</p></div><form id="contactForm"><h3>Зөвлөгөө авах хүсэлт</h3><label>Таны нэр<input required minlength="2" name="name" placeholder="Нэрээ оруулна уу"></label><label>Утасны дугаар<input required pattern="[0-9+ -]{8,15}" name="phone" placeholder="99112233"></label><label>Сонирхож буй бүтээгдэхүүн<select name="product"><option>AquaPure RO-5</option><option>AquaPure Office</option><option>AquaPure Mini</option><option>Бусад</option></select></label><button class="primary" type="submit">Хүсэлт илгээх →</button><p id="message"></p></form></section></main>
+<footer>💧 AquaPure <span>© 2026 · Цэвэр усны шийдэл</span><a href="#">Дээшээ ↑</a></footer><div id="overlay"></div><aside id="cart"><button id="close">×</button><h2>Таны сагс</h2><div id="items">Таны сагс хоосон байна.</div><strong id="total">₮ 0</strong><button class="primary" id="checkout">Захиалга өгөх</button></aside><script src="script.js"></script></body></html>
