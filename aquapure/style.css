@@ -41,7 +41,7 @@ em{font-style:normal;color:var(--blue)}
 .hero-orbit{position:absolute;border:1px solid rgba(8,127,185,.14);border-radius:50%;transform:rotate(-20deg)}
 .orbit-one{width:390px;height:280px}.orbit-two{width:330px;height:360px;transform:rotate(35deg)}
 .hero-photo{position:relative;z-index:1;width:90%;height:90%;display:grid;place-items:center}
-.hero-photo img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 22px 22px rgba(20,65,90,.12))}
+.hero-photo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 22px 22px rgba(20,65,90,.12))}
 .hero-note{position:absolute;z-index:2;right:-3px;bottom:42px;background:rgba(255,255,255,.94);border:1px solid #e4f0f5;border-radius:13px;padding:13px 16px;display:flex;align-items:center;gap:11px;box-shadow:var(--shadow)}
 .note-icon{width:30px;height:30px;border-radius:9px;background:#e5f6fd;color:var(--blue);display:grid;place-items:center;font-size:18px}
 .hero-note b,.hero-note small{display:block}.hero-note b{font-size:10px}.hero-note small{font-size:8px;color:#8398a5;margin-top:4px}
