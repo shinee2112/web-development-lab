@@ -68,9 +68,3 @@ body.dark .contact form{box-shadow:0 12px 35px rgba(0,0,0,.12)}
 .product-art img{display:block;width:100%;height:100%;object-fit:contain;border-radius:8px;mix-blend-mode:multiply}
 body.dark .product-art{background:#223444}
 body.dark .product-art img{mix-blend-mode:normal}
-
-/* Transparent-background product cutouts */
-.product-art{background:transparent!important;padding:8px 18px}
-.product-art img{object-fit:contain;mix-blend-mode:multiply;background:transparent}
-body.dark .product-art{background:transparent!important}
-body.dark .product-art img{mix-blend-mode:normal}
