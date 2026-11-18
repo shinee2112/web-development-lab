@@ -90,7 +90,7 @@ header .call{white-space:nowrap;flex:none}
 
 
 /* Use the newly supplied exact photo for the Khoymor molkhoo cabinet */
-.hero-slide.photo-1,.product-photo.photo-1{background-image:url('images/hoimoriin-molkhoo.jpg');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
+.hero-slide.photo-1,.product-photo.photo-1{background-image:url('images/hoimoriin-molkhoo.webp');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
 
 /* Footer logo matches the clean round header logo */
 .foot>div:first-child{display:flex;align-items:center;gap:14px;min-width:0}
@@ -125,7 +125,7 @@ const data=[
 ];
 const names={molkhoo:"Мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф"};
 const catalog=document.querySelector("#catalog"),products=document.querySelector("#products");
-function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual"><img class="product-photo" src="images/hoimoriin-molkhoo.jpg" alt="Хойморын мөлхөө тавилга"></div><div class="product-info"><div class="code">КОД: '+p.code+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
+function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual"><img class="product-photo" src="images/hoimoriin-molkhoo.webp" alt="Хойморын мөлхөө тавилга"></div><div class="product-info"><div class="code">КОД: '+p.code+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
 document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>showCategory(b.dataset.category)));
 document.querySelector("#back").addEventListener("click",()=>document.querySelector("#categories").scrollIntoView({behavior:"smooth"}));
 </script>
