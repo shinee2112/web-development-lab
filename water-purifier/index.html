@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АкваСэнс | Ус цэвэршүүлэгч</title>
+<meta name="description" content="Гэр, оффисын ус цэвэршүүлэгч, шүүлтүүр, сэлбэгийн онлайн дэлгүүр.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#top" aria-label="АкваСэнс нүүр">
+      <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C12 2 5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13z" fill="currentColor"/></svg>
+      <span>АкваСэнс</span>
+    </a>
+    <nav class="nav" aria-label="Үндсэн цэс">
+      <a href="#products">Бүтээгдэхүүн</a>
+      <a href="#why">Давуу тал</a>
+      <a href="#faq">Асуулт</a>
+      <a href="#contact">Холбоо барих</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Сагс нээх">
+      Сагс <span class="badge" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Гэр · Оффис · Үйлдвэр</p>
+        <h1>Цэвэр ус — эрүүл амьдралын эхлэл</h1>
+        <p class="lead">Усны гаралтай үл хамааран гэр бүлдээ аюулгүй, амттай ус. Суурилуулалт, шүүлтүүр солих үйлчилгээтэй.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#products">Бүтээгдэхүүн үзэх</a>
+          <a class="btn ghost" href="#contact">Үнэгүй зөвлөгөө</a>
+        </div>
+        <ul class="stats">
+          <li><strong>99.9%</strong><span>бохирдол шүүнэ</span></li>
+          <li><strong>2 жил</strong><span>баталгаат хугацаа</span></li>
+          <li><strong>24 цаг</strong><span>УБ дотор хүргэлт</span></li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="drop"></div>
+        <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <div class="wrap">
+      <h2>Бүтээгдэхүүн</h2>
+      <div class="toolbar">
+        <div class="chips" id="filters" role="group" aria-label="Ангилал">
+          <button class="chip active" data-cat="all">Бүгд</button>
+          <button class="chip" data-cat="home">Гэрийн</button>
+          <button class="chip" data-cat="office">Оффис</button>
+          <button class="chip" data-cat="filter">Шүүлтүүр</button>
+        </div>
+        <label class="sort">Эрэмбэ
+          <select id="sort">
+            <option value="def">Үндсэн</option>
+            <option value="asc">Үнэ: бага → их</option>
+            <option value="desc">Үнэ: их → бага</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <section id="why" class="section alt">
+    <div class="wrap">
+      <h2>Яагаад АкваСэнс вэ?</h2>
+      <div class="features">
+        <article><div class="ico">1</div><h3>Олон шатлалт шүүлт</h3><p>Тунадас, идэвхижүүлсэн нүүрс, RO мембран, эрдэсжүүлэгч — усны чанарт тохирсон шат.</p></article>
+        <article><div class="ico">2</div><h3>Үнэгүй суурилуулалт</h3><p>Мэргэжлийн инженер гэрт тань очиж холбож, ажиллуулж өгнө.</p></article>
+        <article><div class="ico">3</div><h3>Шүүлтүүрийн сануулга</h3><p>Солих цаг болоход бид урьдчилан холбогдоно.</p></article>
+        <article><div class="ico">4</div><h3>2 жилийн баталгаа</h3><p>Үйлдвэрийн гэмтэл, согогт баталгаат засвар.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="wrap narrow">
+      <h2>Түгээмэл асуулт</h2>
+      <details><summary>Шүүлтүүрийг хэдэн сард нэг солих вэ?</summary><p>Ихэвчлэн тунадасны шүүлтүүрийг 3–6 сар, нүүрсийг 6–12 сар, RO мембраныг 18–24 сард солино. Усны хатуулаг өндөр бол хугацаа богиносно.</p></details>
+      <details><summary>Манай усанд ямар төрлийн цэвэршүүлэгч тохирох вэ?</summary><p>Усны хатуулаг, хүнд металлын түвшнээс хамаарна. Доорх маягтаар холбогдвол усны шинжилгээнд тулгуурлан зөвлөнө.</p></details>
+      <details><summary>Цахилгаан шаардлагатай юу?</summary><p>RO загварууд насос ашигладаг тул цахилгаан хэрэгтэй. Данх, тогтмол шүүлтүүр цахилгаангүй ажиллана.</p></details>
+      <details><summary>Төлбөр хэрхэн хийх вэ?</summary><p>Бэлнээр, шилжүүлгээр эсвэл картаар хүлээн авахад төлнө.</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="wrap narrow">
+      <h2>Холбоо барих</h2>
+      <p class="muted">Утасны дугаараа үлдээгээрэй, 30 минутын дотор залгана.</p>
+      <form id="contactForm" class="form" novalidate>
+        <label>Нэр<input name="name" required autocomplete="name"></label>
+        <label>Утас<input name="phone" required inputmode="tel" pattern="[0-9+\s-]{8,}" autocomplete="tel"></label>
+        <label>Мессеж<textarea name="msg" rows="3" placeholder="Жишээ: 3 өрөө байр, 4 хүнтэй гэр бүл"></textarea></label>
+        <button class="btn primary" type="submit">Илгээх</button>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> АкваСэнс. Бүх эрх хуулиар хамгаалагдсан.</span>
+    <span>Улаанбаатар · Даваа–Бямба 09:00–19:00</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Сагс" aria-hidden="true">
+  <div class="drawer-head"><h3>Таны сагс</h3><button id="closeCart" aria-label="Хаах">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Нийт</span><strong id="cartTotal">0₮</strong></div>
+    <button class="btn primary full" id="checkout">Захиалах</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
