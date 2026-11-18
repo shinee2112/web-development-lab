@@ -31,3 +31,35 @@ body.dark #items{color:#a9bac8}
 body.dark #items p{border-color:#2b4051}
 body.dark #cart>button:first-child{color:#e4edf5}
 @media(max-width:760px){.header-actions{gap:6px}#themeToggle{padding:9px 10px;font-size:10px}header{gap:8px}}
+
+
+/* Small visual polish */
+body{background:#fbfdff;line-height:1.55}
+.top{letter-spacing:.15px}
+header{box-shadow:0 5px 22px rgba(18,55,82,.045)}
+.logo{line-height:1.15}
+.logo small{margin-top:4px}
+nav a{transition:color .2s ease}
+nav a:hover{color:#0788c9}
+.hero{min-height:500px}
+.hero h1{max-width:650px}
+.hero .primary,.white,.add,header button,#themeToggle{transition:transform .18s ease,box-shadow .18s ease,background-color .2s ease}
+.hero .primary:hover,.white:hover,.add:hover,header button:hover,#themeToggle:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(8,127,189,.14)}
+.visual{overflow:hidden}
+.float{z-index:2}
+.benefits{border-radius:12px;background:rgba(240,249,254,.55)}
+.products article{background:#fff}
+.products article:focus-within{outline:2px solid #8ed8f7;outline-offset:2px}
+.product-art{overflow:hidden}
+.banner{box-shadow:0 16px 40px rgba(7,81,126,.12)}
+.contact form{box-shadow:0 12px 35px rgba(18,55,82,.06)}
+.contact input:focus,.contact select:focus{outline:2px solid #8ed8f7;border-color:#0788c9}
+footer{border-top:1px solid #edf3f7}
+body.dark .benefits{background:#172635}
+body.dark .products article{background:#172635}
+body.dark .contact form{box-shadow:0 12px 35px rgba(0,0,0,.12)}
+@media(max-width:760px){
+  .hero{min-height:0}
+  .benefits{margin:0 14px}
+  .header-actions{flex-shrink:0}
+}
