@@ -7,3 +7,17 @@ document.querySelector("#cartOpen").onclick=()=>{drawer.classList.add("open");ov
 document.querySelector("#checkout").onclick=()=>{close();document.querySelector("#contact").scrollIntoView({behavior:"smooth"});document.querySelector("#message").textContent="Захиалгын хүсэлтээ бөглөнө үү."};
 document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".products article").forEach(c=>c.hidden=b.dataset.filter!=="all"&&c.dataset.category!==b.dataset.filter)});
 document.querySelector("#contactForm").onsubmit=e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;document.querySelector("#message").textContent="Баярлалаа! Таны хүсэлтийг хүлээн авлаа.";e.currentTarget.reset()};
+
+// Gentle reveal as sections enter the viewport
+const revealTargets=document.querySelectorAll(".hero>div,.benefits>div,.heading,.products article,.banner,.contact>div,.contact form");
+revealTargets.forEach(el=>el.classList.add("reveal"));
+if("IntersectionObserver" in window){
+  const revealObserver=new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}
+    });
+  },{threshold:.12});
+  revealTargets.forEach(el=>revealObserver.observe(el));
+}else{
+  revealTargets.forEach(el=>el.classList.add("visible"));
+}
