@@ -63,3 +63,8 @@ body.dark .contact form{box-shadow:0 12px 35px rgba(0,0,0,.12)}
   .benefits{margin:0 14px}
   .header-actions{flex-shrink:0}
 }
+
+.product-art{background:#f4f8fb;display:flex;align-items:center;justify-content:center;padding:12px}
+.product-art img{display:block;width:100%;height:100%;object-fit:contain;border-radius:8px;mix-blend-mode:multiply}
+body.dark .product-art{background:#223444}
+body.dark .product-art img{mix-blend-mode:normal}
