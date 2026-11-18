@@ -46,3 +46,26 @@ if("IntersectionObserver" in window){
   revealTargets.forEach(element=>observer.observe(element));
 }else revealTargets.forEach(element=>element.classList.add("visible"));
 drawCart();
+
+
+// Manual day/night theme switch. The preference is remembered on this device.
+const themeToggle=document.querySelector("#themeToggle");
+const themeIcon=document.querySelector("#themeIcon");
+const themeLabel=document.querySelector("#themeLabel");
+function applyTheme(theme){
+  const night=theme==="night";
+  document.body.dataset.theme=night?"night":"day";
+  themeIcon.textContent=night?"☀":"☾";
+  themeLabel.textContent=night?"Day":"Night";
+  themeToggle.setAttribute("aria-pressed",String(night));
+  themeToggle.setAttribute("aria-label",night?"Өдрийн горим асаах":"Шөнийн горим асаах");
+  document.querySelector('meta[name="theme-color"]').content=night?"#0b1b29":"#f2f9fc";
+}
+let savedTheme="day";
+try{savedTheme=localStorage.getItem("aquapure-theme")||"day"}catch(error){}
+applyTheme(savedTheme);
+themeToggle.addEventListener("click",()=>{
+  const next=document.body.dataset.theme==="night"?"day":"night";
+  applyTheme(next);
+  try{localStorage.setItem("aquapure-theme",next)}catch(error){}
+});
