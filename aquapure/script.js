@@ -7,3 +7,19 @@ document.querySelector("#cartOpen").onclick=()=>{drawer.classList.add("open");ov
 document.querySelector("#checkout").onclick=()=>{close();document.querySelector("#contact").scrollIntoView({behavior:"smooth"});document.querySelector("#message").textContent="Захиалгын хүсэлтээ бөглөнө үү."};
 document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".products article").forEach(c=>c.hidden=b.dataset.filter!=="all"&&c.dataset.category!==b.dataset.filter)});
 document.querySelector("#contactForm").onsubmit=e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;document.querySelector("#message").textContent="Баярлалаа! Таны хүсэлтийг хүлээн авлаа.";e.currentTarget.reset()};
+
+// Theme preference: saved on this device
+const themeToggle=document.querySelector("#themeToggle");
+function applyTheme(mode){
+  document.body.classList.toggle("dark",mode==="night");
+  themeToggle.textContent=mode==="night"?"☀️ Day":"🌙 Night";
+  themeToggle.setAttribute("aria-label",mode==="night"?"Өдрийн горимд шилжих":"Шөнийн горимд шилжих");
+}
+let savedTheme="day";
+try{savedTheme=localStorage.getItem("aquapure-theme")||"day"}catch(e){}
+applyTheme(savedTheme);
+themeToggle.addEventListener("click",()=>{
+  const next=document.body.classList.contains("dark")?"day":"night";
+  applyTheme(next);
+  try{localStorage.setItem("aquapure-theme",next)}catch(e){}
+});
