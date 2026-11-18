@@ -91,6 +91,12 @@ header .call{white-space:nowrap;flex:none}
 
 /* Use the newly supplied exact photo for the Khoymor molkhoo cabinet */
 .hero-slide.photo-1,.product-photo.photo-1{background-image:url('images/hoimoriin-molkhoo.jpg');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
+
+/* Footer logo matches the clean round header logo */
+.foot>div:first-child{display:flex;align-items:center;gap:14px;min-width:0}
+.footer-logo{width:78px;height:78px;flex:0 0 78px;object-fit:contain;object-position:center;border-radius:50%;background:#050505;border:1px solid #d6a52e;padding:4px;box-shadow:0 3px 14px #d6a52e22;margin:0}
+.foot>div:first-child small{display:block;line-height:1.5}
+@media(max-width:760px){.footer-logo{width:58px;height:58px;flex-basis:58px}.foot>div:first-child{gap:10px}}
 </style>
 </head>
 <body>
@@ -104,7 +110,7 @@ header .call{white-space:nowrap;flex:none}
 </div></section>
 <section class="section" id="catalog" hidden><div class="wrap"><div class="toolbar"><div><div class="eyebrow">ХОРОЛ · КАТАЛОГ</div><h2 id="catalogTitle">Бүтээгдэхүүн</h2></div><button class="back" id="back">← Ангилал руу буцах</button></div><div class="products" id="products"></div></div></section>
 <section class="section wrap" id="about"><div class="section-head"><div class="eyebrow">ЯАГААД ХОРОЛ ГЭЖ?</div><h2>Чанартай хийц, сэтгэл шингэсэн бүтээл</h2></div><div class="features"><div class="feature"><span>♧</span><b>100% ЦЭВЭР МОД</b></div><div class="feature"><span>✧</span><b>ЧАНАРТАЙ ХИЙЦ</b></div><div class="feature"><span>⚒</span><b>ЗАХИАЛГААР ХИЙНЭ</b></div><div class="feature"><span>▣</span><b>ТҮРГЭН ХҮРГЭЛТ</b></div><div class="feature"><span>◇</span><b>БАТАЛГААТ ҮЙЛЧИЛГЭЭ</b></div></div></section>
-<footer><div class="wrap foot"><div><img class="footer-logo" src="logo.webp" alt="Хорол тавилгын үйлдвэрийн лого"><small>Тавилгын үйлдвэр · Цэвэр модон тавилга</small></div><div><b>Захиалга, лавлагаа</b><br><small>88781212 · 99781212</small></div><div><small>УБ хотод үнэгүй хүргэлт · Орон нутагт унаанд тавина</small></div></div></footer>
+<footer><div class="wrap foot"><div><img class="footer-logo" src="logo.webp" alt="Хорол тавилгын үйлдвэрийн лого"><small>Тавилгын үйлдвэр · Цэвэр модон тавилга</small></div><div><b>Захиалга, лавлагаа</b><br><small>88781212 · 99781212</small></div><div><small>УБ хот руу хүргэлт үнэгүй · Орон нутгийн унаанд тавьж өгнө</small></div></div></footer>
 <script>
 const data=[
 {cat:"molkhoo",code:"M10-2",name:"Зочны өрөөний тавилгын иж бүрдэл",price:"1,300,000₮",lease:"63,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай"},
