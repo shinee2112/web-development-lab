@@ -111,6 +111,22 @@ header .call{white-space:nowrap;flex:none}
 .photo-placeholder{width:100%;height:100%;min-height:0;display:grid;place-items:center;color:#a28a68;font-size:11px;font-weight:800;letter-spacing:1px;background:linear-gradient(145deg,#faf8f3,#eee7dc);border:1px dashed #d9c8ad;border-radius:6px}
 
 .hero-slide.photo-4{background-image:url('https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/a_clean_high_resolution_product_style_image_of_th.png');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
+
+/* Restore the carousel cards to their original stacking order.
+   Keep the quality badge below the image captions instead of covering them. */
+.hero-art{overflow:visible;height:380px;margin-bottom:56px}
+.hero-slider{position:relative;z-index:2}
+.hero-stamp{z-index:1;bottom:-42px;right:12px}
+.hero-slide:after{z-index:1}
+@media(max-width:760px){
+ .hero-art{height:275px;margin-bottom:54px;overflow:visible}
+ .hero-slider{z-index:2}
+ .hero-stamp{z-index:1;bottom:-40px;right:10px}
+}
+@media(max-width:430px){
+ .hero-art{height:250px;margin-bottom:52px}
+ .hero-stamp{bottom:-38px;right:8px}
+}
 </style>
 </head>
 <body>
