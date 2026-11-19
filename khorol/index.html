@@ -200,49 +200,17 @@ header .call{white-space:nowrap;flex:none}
  .hero-stamp{right:8px;bottom:7px;font-size:7px}
 }
 
-/* Quality phrase placed in the marked space below the carousel */
-.hero-art{margin-bottom:76px !important;overflow:visible !important}
-.hero-stamp{position:absolute;right:0;bottom:-64px;z-index:5;background:#080706;border:1px solid #d6a52e;color:#f1d16b;padding:12px 17px;font-size:11px;font-weight:800;white-space:nowrap}
-@media(max-width:760px){.hero-art{margin-bottom:70px !important}.hero-stamp{right:0;bottom:-58px;font-size:9px;padding:10px 12px}}
-@media(max-width:430px){.hero-stamp{font-size:8px;padding:9px 10px}}
+/* Restore hero carousel and badge to the normal contained layout */
+.hero-art{height:330px !important;margin-bottom:0 !important;overflow:hidden !important}
+.hero-slider{inset:auto !important;padding:24px 0 58px !important}
+.hero-stamp{position:absolute !important;right:2% !important;bottom:18px !important;z-index:5 !important;max-width:calc(100% - 24px);white-space:normal}
+@media(max-width:760px){
+ .hero-art{height:230px !important;margin-bottom:0 !important;overflow:hidden !important}
+ .hero-slider{padding:14px 0 48px !important}
+ .hero-stamp{right:10px !important;bottom:9px !important;font-size:8px;padding:8px 10px}
+}
+@media(max-width:430px){
+ .hero-art{height:205px !important}
+ .hero-stamp{right:8px !important;bottom:7px !important;font-size:7px;max-width:calc(100% - 16px)}
+}
 </style>
-</head>
-<body>
-<header><a class="brand brand-logo" href="#home" aria-label="Хорол тавилгын үйлдвэр"><img src="logo.webp" alt="Хорол тавилгын үйлдвэрийн лого"></a><nav><a href="#home">НҮҮР</a><a href="#categories">АНГИЛАЛ</a><a href="#about">БИДНИЙ ТУХАЙ</a></nav><a class="call" href="tel:88781212">☎ 8878-1212</a></header>
-<section class="hero" id="home"><div class="wrap hero-in"><div><div class="eyebrow">МОНГОЛ ГЭРИЙН БҮХ ТӨРЛИЙН ТАВИЛГА</div><h1>Таны гэрт<br>зохицох тавилга.</h1><p>Хорол тавилгын үйлдвэр — цэвэр модон тавилга, чанартай хийц, захиалгаар үйлдвэрлэл. Өөрт тохирох загвараа сонгоорой.</p><a class="goldbtn" href="#categories">Каталог үзэх →</a></div><div class="hero-art"><div class="hero-slider"><div class="hero-track"><div class="hero-slide photo-1" data-label="ХОЙМОРЫН МӨЛХӨӨ ТАВИЛГА"></div><div class="hero-slide photo-2" data-label="МОДОН УГААЛТУУР"></div><div class="hero-slide photo-3" data-label="ХУВЦАСНЫ ШКАФ"></div><div class="hero-slide photo-4" data-label="ГАЛ ТОГООНЫ ТАВИЛГА"></div><div class="hero-slide photo-1" data-label="ХОЙМОРЫН МӨЛХӨӨ ТАВИЛГА"></div><div class="hero-slide photo-2" data-label="МОДОН УГААЛТУУР"></div><div class="hero-slide photo-3" data-label="ХУВЦАСНЫ ШКАФ"></div><div class="hero-slide photo-4" data-label="ГАЛ ТОГООНЫ ТАВИЛГА"></div></div></div><div class="hero-stamp">✦ ЧАНАР · НАЙДВАР · МОНГОЛ УР ЧАДВАР</div></div></div></section>
-<section class="section wrap" id="categories"><div class="section-head"><div class="eyebrow">БҮТЭЭГДЭХҮҮНИЙ АНГИЛАЛ</div><h2>Юу хайж байна вэ?</h2><p>Ангиллаа сонгоод тухайн төрлийн бүх загварыг хараарай.</p></div><div class="categories">
-<button class="category" data-category="molkhoo"><div class="cat-art"><small>01 / LIVING</small></div><div class="cat-copy"><b>Мөлхөө тавилга</b><span>Зочны өрөөний тавилга, ком</span><em>Загварууд үзэх →</em></div></button>
-<button class="category" data-category="kitchen"><div class="cat-art kitchen"><small>02 / KITCHEN</small></div><div class="cat-copy"><b>Гал тогоо</b><span>Гал тогооны иж бүрдэл</span><em>Загварууд үзэх →</em></div></button>
-<button class="category" data-category="sink"><div class="cat-art sink"><small>03 / SINK</small></div><div class="cat-copy"><b>Угаалтуур</b><span>Угаалтуурын доод шүүгээ</span><em>Загварууд үзэх →</em></div></button>
-<button class="category" data-category="wardrobe"><div class="cat-art wardrobe"><small>04 / WARDROBE</small></div><div class="cat-copy"><b>Шкаф</b><span>Хувцасны шкаф, хадгалах шүүгээ</span><em>Загварууд үзэх →</em></div></button>
-</div></section>
-<section class="section" id="catalog" hidden><div class="wrap"><div class="toolbar"><div><div class="eyebrow">ХОРОЛ · КАТАЛОГ</div><h2 id="catalogTitle">Бүтээгдэхүүн</h2></div><button class="back" id="back">← Ангилал руу буцах</button></div><div class="products" id="products"></div></div></section>
-<section class="section wrap" id="about"><div class="section-head"><div class="eyebrow">ЯАГААД ХОРОЛ ГЭЖ?</div><h2>Чанартай хийц, сэтгэл шингэсэн бүтээл</h2></div><div class="features"><div class="feature"><span>♧</span><b>100% ЦЭВЭР МОД</b></div><div class="feature"><span>✧</span><b>ЧАНАРТАЙ ХИЙЦ</b></div><div class="feature"><span>⚒</span><b>ЗАХИАЛГААР ХИЙНЭ</b></div><div class="feature"><span>◇</span><b>БАТАЛГААТ ҮЙЛЧИЛГЭЭ</b></div></div></section>
-<footer><div class="wrap foot"><div><img class="footer-logo" src="logo.webp" alt="Хорол тавилгын үйлдвэрийн лого"><small>Тавилгын үйлдвэр · Цэвэр модон тавилга</small></div><div><b>Захиалга, лавлагаа</b><br><small>88781212 · 99781212</small></div><div><small>УБ хот руу хүргэлт үнэгүй · Орон нутгийн унаанд тавьж өгнө</small></div></div></footer>
-<script>
-const data=[
-{cat:"molkhoo",code:"M10-2",name:"Хойморын мөлхөө тавилга",price:"1,300,000₮",lease:"63,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/White%20and%20Gold%20Entertainment%20Cabinet%20(1).png"},
-{cat:"molkhoo",code:"M1-2",name:"Хойморын мөлхөө тавилга",price:"1,400,000₮",lease:"68,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Ornate%20White%20and%20Gold%20Display%20Cabinet.png"},
-
-{cat:"molkhoo",code:"M19-2",name:"Хойморын мөлхөө тавилга",price:"1,600,000₮",lease:"80,000₮ / сар",size:"260 × 145 × 40 см",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Ornate%20White%20and%20Gold%20Entertainment%20Cabinet.png"},
-{cat:"molkhoo",code:"M17-2",name:"Хойморын мөлхөө тавилга",price:"2,400,000₮",lease:"120,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/White%20and%20Gold%20Entertainment%20Cabinet.png"},
-{cat:"molkhoo",code:"M12-2",name:"Хойморын мөлхөө тавилга",price:"1,450,000₮",lease:"60,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Ornate%20White%20and%20Gold%20Entertainment%20Unit.png"},
-{cat:"molkhoo",code:"M8-2",name:"Хойморын мөлхөө тавилга",price:"2,800,000₮",lease:"134,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Cream%20and%20Gold%20Entertainment%20Cabinet%20with%20Fireplace.png"},
-{cat:"kitchen",code:"K4",name:"Гал тогооны тавилга",price:"1,000,000₮",lease:"50,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/a_clean_high_resolution_product_style_image_of_th.png"},
-{cat:"kitchen",code:"K17-2",name:"Гал тогооны иж бүрдэл",price:"1,100,000₮",lease:"51,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай"},
-{cat:"sink",code:"B2-2",name:"Угаалтуурын тавилга",price:"450,000₮",lease:"Лизингийн мэдээлэл аваарай",size:"70 × 145 × 40 см",image:"images/sink.jpg"},
-{cat:"wardrobe",code:"",name:"Хувцасны шкаф",price:"Үнийн мэдээлэл аваарай",lease:"Лизингийн мэдээлэл аваарай",size:"Хэмжээ тодруулах шаардлагатай",image:"images/wardrobe.jpg"}
-];
-const names={molkhoo:"Хойморын мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф"};
-const catalog=document.querySelector("#catalog"),products=document.querySelector("#products");
-function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual">'+(p.image?'<img class="product-photo" src="'+p.image+'" alt="'+p.name+'">' : '<div class="photo-placeholder">ЗУРАГ УДАХГҮЙ НЭМЭГДЭНЭ</div>')+'</div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
-document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>showCategory(b.dataset.category)));
-document.querySelector("#back").addEventListener("click",()=>document.querySelector("#categories").scrollIntoView({behavior:"smooth"}));
-</script>
-</body></html>
-
-/* Move the lower-right quality badge below the furniture captions */
-.hero-art{overflow:visible;height:380px;margin-bottom:34px}
-.hero-stamp{bottom:-28px;right:12px;z-index:3}
-@media(max-width:760px){.hero-art{height:275px;margin-bottom:34px;overflow:visible}.hero-stamp{bottom:-28px;right:10px}}
-@media(max-width:430px){.hero-art{height:250px;margin-bottom:34px}.hero-stamp{bottom:-28px;right:8px}}
