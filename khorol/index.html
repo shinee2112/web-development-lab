@@ -214,6 +214,19 @@ header .call{white-space:nowrap;flex:none}
 .hero-slide:after{z-index:1}
 .hero-stamp{z-index:4!important}
 
+
+/* Prevent the moving carousel from expanding the page/grid and shifting the hero */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.hero-in{width:min(1160px,92%);grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(18px,3vw,40px)}
+.hero-in>div{min-width:0}
+.hero-art{width:100%;min-width:0;max-width:100%;overflow:hidden!important}
+.hero-slider{left:0;right:0;width:100%;max-width:100%;min-width:0;overflow:hidden}
+.hero-track{width:max-content;max-width:none;flex-shrink:0}
+@media(max-width:760px){
+ .hero-in{grid-template-columns:minmax(0,1fr)}
+ .hero-art{width:100%;min-width:0}
+}
+
 </style>
 </head>
 <body>
