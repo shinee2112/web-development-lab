@@ -90,7 +90,7 @@ header .call{white-space:nowrap;flex:none}
 
 
 /* Use the newly supplied exact photo for the Khoymor molkhoo cabinet */
-.hero-slide.photo-1,.product-photo.photo-1{background-image:url('images/hoimoriin-molkhoo.jpg');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
+.hero-slide.photo-1,.product-photo.photo-1{background-image:url('images/0721c74f-e0e3-4e9b-ac1f-7d3c985fe209.jpg');background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#fff}
 
 /* Footer logo matches the clean round header logo */
 .foot>div:first-child{display:flex;align-items:center;gap:14px;min-width:0}
@@ -117,7 +117,7 @@ header .call{white-space:nowrap;flex:none}
 <footer><div class="wrap foot"><div><img class="footer-logo" src="logo.webp" alt="Хорол тавилгын үйлдвэрийн лого"><small>Тавилгын үйлдвэр · Цэвэр модон тавилга</small></div><div><b>Захиалга, лавлагаа</b><br><small>88781212 · 99781212</small></div><div><small>УБ хот руу хүргэлт үнэгүй · Орон нутгийн унаанд тавьж өгнө</small></div></div></footer>
 <script>
 const data=[
-{cat:"molkhoo",code:"M10-2",name:"Хойморын мөлхөө тавилга",price:"1,300,000₮",lease:"63,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"images/hoimoriin-molkhoo.jpg"},
+{cat:"molkhoo",code:"M10-2",name:"Хойморын мөлхөө тавилга",price:"1,300,000₮",lease:"63,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"images/0721c74f-e0e3-4e9b-ac1f-7d3c985fe209.jpg"},
 {cat:"kitchen",code:"K4",name:"Гал тогооны тавилга",price:"1,000,000₮",lease:"50,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"images/kitchen.jpg"},
 {cat:"kitchen",code:"K17-2",name:"Гал тогооны иж бүрдэл",price:"1,100,000₮",lease:"51,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай"},
 {cat:"sink",code:"B2-2",name:"Угаалтуурын тавилга",price:"450,000₮",lease:"Лизингийн мэдээлэл аваарай",size:"70 × 145 × 40 см",image:"images/sink.jpg"},
@@ -125,7 +125,7 @@ const data=[
 ];
 const names={molkhoo:"Хойморын мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф"};
 const catalog=document.querySelector("#catalog"),products=document.querySelector("#products");
-function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual"><img class="product-photo" src="'+(p.image||'images/hoimoriin-molkhoo.jpg')+'" alt="'+p.name+'"></div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
+function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual"><img class="product-photo" src="'+(p.image||'images/0721c74f-e0e3-4e9b-ac1f-7d3c985fe209.jpg')+'" alt="'+p.name+'"></div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
 document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>showCategory(b.dataset.category)));
 document.querySelector("#back").addEventListener("click",()=>document.querySelector("#categories").scrollIntoView({behavior:"smooth"}));
 </script>
