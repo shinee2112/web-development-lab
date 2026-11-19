@@ -205,6 +205,15 @@ header .call{white-space:nowrap;flex:none}
 .hero-stamp{position:absolute;right:0;bottom:-64px;z-index:5;background:#080706;border:1px solid #d6a52e;color:#f1d16b;padding:12px 17px;font-size:11px;font-weight:800;white-space:nowrap}
 @media(max-width:760px){.hero-art{margin-bottom:70px !important}.hero-stamp{right:0;bottom:-58px;font-size:9px;padding:10px 12px}}
 @media(max-width:430px){.hero-stamp{font-size:8px;padding:9px 10px}}
+
+/* Final carousel depth correction: keep the moving furniture cards one layer back */
+.hero-art{isolation:isolate;position:relative;overflow:hidden!important}
+.hero-slider{z-index:0!important}
+.hero-track{z-index:0!important}
+.hero-slide{z-index:0!important;box-shadow:none}
+.hero-slide:after{z-index:1}
+.hero-stamp{z-index:4!important}
+
 </style>
 </head>
 <body>
