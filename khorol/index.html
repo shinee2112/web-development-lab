@@ -232,6 +232,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 
 .product-photo-enlarged .product-photo{transform:scale(1.13);transform-origin:center center}
+.categories{grid-template-columns:repeat(5,minmax(0,1fr))}.cat-art.beauty:after{width:58%;height:58%;bottom:20px;border:0;background:linear-gradient(90deg,transparent 0 8%,#c8a575 8% 18%,#f8f0e4 18% 27%,#b88b52 27% 34%,transparent 34% 42%,#dfc9a6 42% 66%,transparent 66% 72%,#b88b52 72% 80%,#f7efe2 80% 92%,transparent 92%);box-shadow:none}.cat-art.beauty:before{content:"";position:absolute;width:42%;height:9px;bottom:18px;background:#b9915d;border-radius:3px;box-shadow:0 8px 12px #55422b20}
 </style>
 </head>
 <body>
@@ -242,6 +243,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 <button class="category" data-category="kitchen"><div class="cat-art kitchen"><small>02 / KITCHEN</small></div><div class="cat-copy"><b>Гал тогоо</b><span>Гал тогооны иж бүрдэл</span><em>Загварууд үзэх →</em></div></button>
 <button class="category" data-category="sink"><div class="cat-art sink"><small>03 / SINK</small></div><div class="cat-copy"><b>Угаалтуур</b><span>Угаалтуурын доод шүүгээ</span><em>Загварууд үзэх →</em></div></button>
 <button class="category" data-category="wardrobe"><div class="cat-art wardrobe"><small>04 / WARDROBE</small></div><div class="cat-copy"><b>Шкаф</b><span>Хувцасны шкаф, хадгалах шүүгээ</span><em>Загварууд үзэх →</em></div></button>
+<button class="category" data-category="beauty"><div class="cat-art beauty"><small>05 / BEAUTY</small></div><div class="cat-copy"><b>Гоо сайхны булан</b><span>Гоо сайхны ширээ, толь, хэрэгслийн тавиур</span><em>Загварууд үзэх →</em></div></button>
 </div></section>
 <section class="section" id="catalog" hidden><div class="wrap"><div class="toolbar"><div><div class="eyebrow">ХОРОЛ · КАТАЛОГ</div><h2 id="catalogTitle">Бүтээгдэхүүн</h2></div><button class="back" id="back">← Ангилал руу буцах</button></div><div class="products" id="products"></div></div></section>
 <section class="section wrap" id="about"><div class="section-head"><div class="eyebrow">ЯАГААД ХОРОЛ ГЭЖ?</div><h2>Чанартай хийц, сэтгэл шингэсэн бүтээл</h2></div><div class="features"><div class="feature"><span>♧</span><b>100% ЦЭВЭР МОД</b></div><div class="feature"><span>✧</span><b>ЧАНАРТАЙ ХИЙЦ</b></div><div class="feature"><span>⚒</span><b>ЗАХИАЛГААР ХИЙНЭ</b></div><div class="feature"><span>◇</span><b>БАТАЛГААТ ҮЙЛЧИЛГЭЭ</b></div></div></section>
@@ -284,7 +286,7 @@ const data=[
 {cat:"wardrobe",code:"S1-2",name:"Хувцасны шкаф",price:"800,000₮",lease:"38,000₮ / сар",size:"110 × 145 × 40 см",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Classic%20Cream%20Wardrobe%20with%20Gold%20Accents.png"},{cat:"wardrobe",code:"S2",name:"Хувцасны шкаф",price:"850,000₮",lease:"41,000₮ / сар",size:"120 × 145 × 40 см",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Ornate%20Light%20Oak%20Wardrobe.png"},
 {cat:"wardrobe",code:"S9",name:"Хувцасны шкаф",price:"650,000₮",lease:"35,000₮ / сар",size:"Хэмжээ тодруулах шаардлагатай",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Elegant%20Light%20Oak%20Wardrobe%20with%20Gold%20Details.png"},{cat:"wardrobe",code:"P1-2",name:"Угаалгын өрөөний иж бүрдэл",price:"3,000,000₮",lease:"145,000₮ / сар",size:"300 × 145 × 40 см",image:"https://raw.githubusercontent.com/shinee2112/web-development-lab/aquapure/khorol/images/Elegant%20Cream%20Modular%20Laundry%20Cabinet%20Set.png"}
 ];
-const names={molkhoo:"Хойморын мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф"};
+const names={molkhoo:"Хойморын мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф",beauty:"Гоо сайхны булан"};
 const catalog=document.querySelector("#catalog"),products=document.querySelector("#products");
 function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product '+(["M1","M5","M16","M9","M10","M19","M8-2"].includes(p.code)?"product-photo-enlarged":"")+'"><div class="product-visual">'+(p.image?'<img class="product-photo" src="'+p.image+'" alt="'+p.name+'">' : '<div class="photo-placeholder">ЗУРАГ УДАХГҮЙ НЭМЭГДЭНЭ</div>')+'</div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
 document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>showCategory(b.dataset.category)));
