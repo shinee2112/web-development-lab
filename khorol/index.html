@@ -230,6 +230,8 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
  .hero-art{width:100%;min-width:0}
 }
 
+
+.product-photo-enlarged .product-photo{transform:scale(1.13);transform-origin:center center}
 </style>
 </head>
 <body>
@@ -284,7 +286,7 @@ const data=[
 ];
 const names={molkhoo:"Хойморын мөлхөө тавилга",kitchen:"Гал тогооны тавилга",sink:"Угаалтуурын тавилга",wardrobe:"Шкаф"};
 const catalog=document.querySelector("#catalog"),products=document.querySelector("#products");
-function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product"><div class="product-visual">'+(p.image?'<img class="product-photo" src="'+p.image+'" alt="'+p.name+'">' : '<div class="photo-placeholder">ЗУРАГ УДАХГҮЙ НЭМЭГДЭНЭ</div>')+'</div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
+function showCategory(cat){document.querySelector("#catalogTitle").textContent=names[cat];const items=data.filter(p=>p.cat===cat);products.innerHTML=items.map(p=>'<article class="product '+(["M1","M5","M16","M9","M10","M19","M8-2"].includes(p.code)?"product-photo-enlarged":"")+'"><div class="product-visual">'+(p.image?'<img class="product-photo" src="'+p.image+'" alt="'+p.name+'">' : '<div class="photo-placeholder">ЗУРАГ УДАХГҮЙ НЭМЭГДЭНЭ</div>')+'</div><div class="product-info"><div class="code">'+(p.code?'КОД: '+p.code:'ШИНЭ ЗАГВАР')+'</div><h3>'+p.name+'</h3><div class="price">'+p.price+'</div><div class="meta">Лизинг: '+p.lease+'<br>'+p.size+'</div><a class="detail" href="tel:88781212">Утасдаж лавлах</a></div></article>').join("")||'<div class="empty">Энэ ангиллын загвар удахгүй нэмэгдэнэ.</div>';catalog.hidden=false;catalog.scrollIntoView({behavior:"smooth"});}
 document.querySelectorAll(".category").forEach(b=>b.addEventListener("click",()=>showCategory(b.dataset.category)));
 document.querySelector("#back").addEventListener("click",()=>document.querySelector("#categories").scrollIntoView({behavior:"smooth"}));
 </script>
